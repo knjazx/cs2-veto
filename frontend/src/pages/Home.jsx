@@ -84,15 +84,16 @@ export default function Home() {
   // Active tab: "local" | "online" | "join"
   const [tab, setTab] = useState("local");
 
-  async function createLobby(mode) {
+async function createLobby(mode) {
     setCreating(true);
     setError("");
     const a = (mode === "local" ? localA : onlineA).trim() || "Team A";
     const b = (mode === "local" ? localB : onlineB).trim() || "Team B";
     const fmt = mode === "local" ? localFormat : onlineFormat;
+    const base = import.meta.env.VITE_BACKEND_URL || "";
     try {
       const params = new URLSearchParams({ mode, format: fmt, team_a_name: a, team_b_name: b });
-      const res  = await fetch(`/lobby/create?${params}`, { method: "POST" });
+      const res  = await fetch(`${base}/lobby/create?${params}`, { method: "POST" });
       const data = await res.json();
       navigate(mode === "local" ? `/room/${data.room_id}?mode=local` : `/room/${data.room_id}?team=A`);
     } catch {
