@@ -97,7 +97,7 @@ async function createLobby(mode) {
       const data = await res.json();
       navigate(mode === "local" ? `/room/${data.room_id}?mode=local` : `/room/${data.room_id}?team=A`);
     } catch {
-      setError("Сервер недоступен. Запусти start-backend.bat");
+      setError("Не удалось подключиться к серверу.");
     } finally {
       setCreating(false);
     }
