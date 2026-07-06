@@ -5,7 +5,7 @@ const MAP_IMAGES = {
   Mirage:   "/maps/mirage.jpg",
   Inferno:  "/maps/inferno.jpg",
   Nuke:     "/maps/nuke.jpg",
-  Overpass: "/maps/overpass.jpg",
+  Cache:    "/maps/cache.jpg",
   Ancient:  "/maps/ancient.jpg",
   Anubis:   "/maps/anubis.jpg",
   Dust2:    "/maps/dust2.jpg",

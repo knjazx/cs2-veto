@@ -3,7 +3,7 @@ from typing import Literal, Optional
 
 
 MapName = Literal[
-    "Mirage", "Inferno", "Nuke", "Overpass", "Ancient", "Anubis", "Dust2"
+    "Mirage", "Inferno", "Nuke", "Cache", "Ancient", "Anubis", "Dust2"
 ]
 
 Format = Literal["BO1", "BO3", "BO5"]
@@ -31,7 +31,7 @@ VETO_SEQUENCES: dict[Format, list[tuple[Team, ActionType]]] = {
 }
 
 ALL_MAPS: list[MapName] = [
-    "Mirage", "Inferno", "Nuke", "Overpass", "Ancient", "Anubis", "Dust2"
+    "Mirage", "Inferno", "Nuke", "Cache", "Ancient", "Anubis", "Dust2"
 ]
 
 
